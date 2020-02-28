@@ -1,0 +1,24 @@
+@font-face{
+    font-family: earwigFactory;
+    src: url(../font/earwigFactory.ttf);
+}
+
+@font-face{
+    font-family: p5hatty;
+    src:url(../font/p5hatty.ttf);
+}
+
+h1{
+    font-family: earwigFactory;
+    
+}
+p{
+    font-family: p5hatty;
+}
+.jumbotron
+{
+    background-image: url("../images/personaHeader.jpg") ;
+    background-size: cover;
+    width: 100%;
+    min-height: ;
+}

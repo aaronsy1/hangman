@@ -12,6 +12,9 @@ h1{
     font-family: earwigFactory;
     
 }
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
 *{
     font-family: p5hatty;
 }
@@ -21,4 +24,9 @@ h1{
     background-size: cover;
     width: 100%;
     min-height: ;
+}
+
+#gameBoard{
+    font: bold;
+    font-size: 30px;;
 }

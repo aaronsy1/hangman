@@ -1,5 +1,11 @@
 let chars = ["joker","panther", "skull", "queen", "mona", "fox", "oracle", "noir", "crow"];
 let emptyChar = [];
+let guessesRemaining = 10;
+let points = 0;
+let endGame = false;
+let guessedLetters = [];
+let foundLetter = false;
+
 
 randomChar = chars[Math.floor(Math.random()*chars.length)]
 console.log("random character is " + randomChar)
@@ -18,4 +24,6 @@ console.log(emptyChar.join(' '));
 
 emptyChar=emptyChar.join(' ');
 
-document.getElementById("gameBoard").textContent = emptyChar;
+
+
+

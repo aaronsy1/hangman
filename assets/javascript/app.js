@@ -1,29 +1,26 @@
-let chars = ["joker","panther", "skull", "queen", "mona", "fox", "oracle", "noir", "crow"];
-let emptyChar = [];
-let guessesRemaining = 10;
-let points = 0;
-let endGame = false;
-let guessedLetters = [];
-let foundLetter = false;
-
-
-randomChar = chars[Math.floor(Math.random()*chars.length)]
-console.log("random character is " + randomChar)
-
-for(i=0;i<randomChar.length;i++){
-if (randomChar[i]=== " "){
-    emptyChar.push(" ")
-}
-else{
-    emptyChar.push("_");
-}
-}
-
-console.log("blank spaces are " + emptyChar);
-console.log(emptyChar.join(' '));
-
-emptyChar=emptyChar.join(' ');
+letters = [];
 
 
 
+console.log(letters)
+
+$(document).ready(function(){
+
+
+    $("body").on('click','.startGame',function(){
+        $(".startGame").hide();
+        $(".gameBoard").show();
+
+        for (i=0; i<26; i++){
+            letters.push(String.fromCharCode(i+97))
+            $(".letters").append($(`<button class="userInput btn btn-light m-1" value = ${String.fromCharCode(i+97)}> ${String.fromCharCode(i+97)} </button>`))
+        }
+        console.log(letters);
+        
+
+        
+    })
+
+
+})
 

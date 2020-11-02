@@ -5,27 +5,27 @@ guessedLetters=[]
 let char = [
     {
     name: "mona",
-    image: "./assets/images/mona.jpg"
+    image: "./assets/images/mona.png"
     },
     {
     name: "fox",
-    image: "./assets/images/fox.jpg"
+    image: "./assets/images/fox.png"
     },
     {
     name: "joker",
-    image:"./assets/images/joker.jpg"
+    image:"./assets/images/joker.png"
     },
     {
     name: "panther",
-    image:"./assets/images/panther.jpg"
+    image:"./assets/images/panther.png"
     },
     {
     name: "skull",
-    image: "./assets/images/skull.jpg"
+    image: "./assets/images/skull.png"
     },
     {
     name: "queen",
-    image: "./assets/images/queen.jpg"
+    image: "./assets/images/queen.png"
     },
     {
     name: "oracle",
@@ -33,11 +33,11 @@ let char = [
     },
     {
     name: "noir",
-    image: "./assets/images/noir.jpg"
+    image: "./assets/images/noir.png"
     },
     {
     name: "crow",
-    image: "./assets/images/crow.jpg"
+    image: "./assets/images/crow.png"
     }
 ]
 
@@ -76,6 +76,7 @@ empty = arrToStr(blank);
 
 
 
+
 $(document).ready(function(){
 
 //start game
@@ -92,12 +93,15 @@ $(document).ready(function(){
         $(".randomWord").append(`<h2 class = "m-4">${empty}</h2>`);
 
 
+
+
 //on click of letter button function
 
         $(".userInput").on('click',function(){
 
             clickedLetter = $(this).val();
 
+            
             
 
 //push guessed letter to array and displays to dom
@@ -128,11 +132,29 @@ $(document).ready(function(){
                 
             }
 
+            if(attemptsRemaining <= 0){
+               
+                
+                $(".gameBoard").hide()
+                $(".rules").hide()
+                $(".youLose").show()
+            }
+
+            if(randomChar.name === empty){
+               
+                $(".gameBoard").hide()
+                $(".rules").hide()
+                $(".youWin").show()
+                $(".winningImg").append(`<img src=${randomChar.image}></img>`)
+            }
+
       
         })
        
 
     })
+
+
 
 
 })

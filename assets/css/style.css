@@ -21,10 +21,15 @@ h1{
     background-image: url("../images/personaHeader.jpg") ;
     background-size: cover;
     width: 100%;
-    min-height: ;
+    
 }
 
 #gameBoard{
     font: bold;
     font-size: 30px;;
+}
+
+img {
+max-width:100vh;
+max-height: 100vh;
 }

@@ -42,7 +42,7 @@ let char = [
 ]
 
 
-
+//picking random word from array
 let randomChar = char[Math.floor(Math.random() * char.length)];
 console.log(randomChar.name);
 
@@ -78,7 +78,7 @@ empty = arrToStr(blank);
 
 $(document).ready(function(){
 
-
+//start game
     $("body").on('click','.startGame',function(){
         $(".startGame").hide();
         $(".gameBoard").show();
@@ -91,16 +91,27 @@ $(document).ready(function(){
 
         $(".randomWord").append(`<h2 class = "m-4">${empty}</h2>`);
 
+
+//on click of letter button function
+
         $(".userInput").on('click',function(){
 
             clickedLetter = $(this).val();
 
+            
+
+//push guessed letter to array and displays to dom
+            if(guessedLetters.includes(clickedLetter)){
+                $(".attemptsRemaining").html(`<h2>${attemptsRemaining}</h2>`)
+            }
+
+        else{
             attemptsRemaining--;
             $(".attemptsRemaining").html(`<h2>${attemptsRemaining}</h2>`);
-
             guessedLetters.push(clickedLetter);
             showGuessedLetters = arrToStr(guessedLetters)
             $(".guessedLetters").html(`<h2>${showGuessedLetters}</h2>`)
+        }
 
 
             for(let i=0; i<randomChar.name.length;i++){

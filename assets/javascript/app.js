@@ -132,7 +132,7 @@ $(document).ready(function(){
                 
             }
 
-            if(attemptsRemaining <= 0){
+            if(attemptsRemaining <= 0 && randomChar.name !== empty){
                
                 
                 $(".gameBoard").hide()

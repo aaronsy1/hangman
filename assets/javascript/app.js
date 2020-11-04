@@ -154,7 +154,10 @@ $(document).ready(function(){
 
     })
 
+    $(".playAgain").on('click',function(){
+        location.reload()
 
+    })
 
 
 })
